@@ -1,7 +1,9 @@
 import { gql } from "@apollo/client";
 import { useQuery } from "@apollo/client/react";
 
-const GET_USERS = gql`
+import { NewUserForm } from "./components/NewUserForm";
+
+export const GET_USERS = gql`
   query {
     users {
       id
@@ -29,6 +31,8 @@ function App() {
           ))}
         </ul>
       )}
+
+      <NewUserForm />
     </>
   );
 }
